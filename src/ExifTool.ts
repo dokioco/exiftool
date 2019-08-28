@@ -29,7 +29,8 @@ export { offsetMinutesToZoneName } from "./Timezones"
 const isWin32 = lazy(() => _os.platform() === "win32")
 
 function findExiftool(): string {
-  const path: string = require(`exiftool-vendored.${isWin32() ? "exe" : "pl"}`)
+  // const path: string = require(`exiftool-vendored.${isWin32() ? "exe" : "pl"}`)
+  const path = "/opt/bin/exiftool"
   // This s/app.asar/app.asar.unpacked/ path switch adds support for Electron
   // apps that are ASAR-packed.
 
@@ -59,7 +60,7 @@ export const DefaultExifToolPath = findExiftool()
 export const DefaultExiftoolArgs = ["-stay_open", "True", "-@", "-"]
 
 const _ignoreShebang = lazy(
-  () => !isWin32() && !_fs.existsSync("/usr/bin/perl")
+  () => !isWin32() && !_fs.existsSync("/opt/bin/perl")
 )
 
 /**

@@ -93,7 +93,7 @@ _don't_ use the default singleton, you don't need to `.end()` it.
 
 ```js
 // We're using the singleton here for convenience:
-const exiftool = require("exiftool-vendored").exiftool
+const exiftool = require("exiftool").exiftool
 
 // And to verify everything is working:
 exiftool

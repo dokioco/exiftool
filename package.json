@@ -1,6 +1,6 @@
 {
-  "name": "exiftool-vendored",
-  "version": "8.21.1",
+  "name": "exiftool",
+  "version": "8.21.1-no-vendored",
   "description": "Efficient, cross-platform access to ExifTool",
   "main": "./dist/ExifTool.js",
   "types": "./dist/ExifTool.d.ts",
@@ -104,9 +104,5 @@
     "batch-cluster": "^5.6.7",
     "luxon": "^1.17.2",
     "tz-lookup": "^6.1.23"
-  },
-  "optionalDependencies": {
-    "exiftool-vendored.exe": "11.59.0",
-    "exiftool-vendored.pl": "11.59.0"
   }
 }
